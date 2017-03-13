@@ -7,11 +7,18 @@ declared-services:
     label: cloudantNoSQLDB
     plan: Lite
 applications:
-- name: conversationMaster-cattoire-1649
+- name: ecfacebot
   memory: 1024M
   instances: 1
-  host: conversationMaster-cattoire-1649
+  host: ecfacebot
   services:
     - wcm-conversation
     - wcm-cloudant
-  
+env:
+    MESSENGER_APP_SECRET: UNDEFINED
+    MESSENGER_PAGE_TOKEN: UNDEFINED
+    MESSENGER_VERIFY_TOKEN: UNDEFINED
+    MESSENGER_WEBHOOKENDPOINT: UNDEFINED
+    TELEGRAM_AUTH_TOKEN: UNDEFINED
+    TELEGRAM_WEBHOOKENDPOINT: UNDEFINED
+    WORKSPACE_ID: UNDEFINED

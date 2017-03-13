@@ -4,11 +4,11 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 
 
-## Deploy your own chatbot in a few clicks !
+## Installeer je eign bot applicatie op IBM Bluemix !
 
 ### I - Deploy to Bluemix
 
-  The first thing you have to do is to deploy the sample app to Blumix.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cyrillebenoit/conversationMaster)
+  Eerst en vooral moeten we een bot applicatie instaleren, dit kan gebeuren door op de bijbehorende button te klikken. Eerst moet je wel een usernaam en paswoord hebben op Bluemix. Indien je niet weet hoe dit moet vraag dan even een begeleider  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cattoire/Facebot)
 
   In this example, we'll call this app 'sample' and its link will be sample.mybluemix.net.
 
