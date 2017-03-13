@@ -1,0 +1,17 @@
+---
+declared-services:
+  wcm-conversation:
+    label: conversation
+    plan: free
+  wcm-cloudant:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+- name: conversationMaster-cattoire-1649
+  memory: 1024M
+  instances: 1
+  host: conversationMaster-cattoire-1649
+  services:
+    - wcm-conversation
+    - wcm-cloudant
+  
