@@ -6,56 +6,111 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 ## Installeer je eign bot applicatie op IBM Bluemix !
 
-### I - Deploy to Bluemix
+### I - Installeer in Bluemix
 
   Eerst en vooral moeten we een bot applicatie instaleren, dit kan gebeuren door op de bijbehorende button te klikken. Eerst moet je wel een usernaam en paswoord hebben op Bluemix. Indien je niet weet hoe dit moet vraag dan even een begeleider  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cattoire/Facebot)
 
-  In this example, we'll call this app 'sample' and its link will be sample.mybluemix.net.
+  Kies een naam voor je applicatie. De latere link naar de applicatie wordt dan https://jouwgekozennaam.bluemix.net/ Noteer deze naam ergens want je zal die later nodig hebben.
 
-### II - Create a new Facebook Page
-  1. Go to https://www.facebook.com/pages/create/
+### II - Maak een nieuwe facebook pagina
+  1. Om je bot te kunnen testen maak je een nieuwe pagina via https://www.facebook.com/pages/create/
 
-  2. Create an app of your choice.
+  (readme_images/01 create facebook page.png)
 
-### III - Create a new Facebook application
-  1. Go to https://developers.facebook.com
+  2. Kies een community pagina
 
-  2. Log in and create a new app.
+  3. Geef de pagina een naam naar keuze. Als er nog tijd over is kan je de pagina straks ook versieren met wat fotos
 
-  3. Choose App for Messenger and Create an app ID.
+### III - Maak een facebook applicatie
+  1. Ga naar https://developers.facebook.com
 
-  4. Select your new Page in Token Generation field.
+  2. Log in met je facebook account en maak een nieuwe app.
+
+  3. Kies App for Messenger en maak  een app ID. Kopieer dit app ID zodat je die hebt voor later.
+
+  4. In het vakje token generation selecteer je, je net gemaakte pagina. Dit genereert automatisch een nieuw token. Bewaar dit token, je hebt dit later nodig.
 
   ![access token](readme_images/access_token.png)
 
-  5. Copy the Page Access Token.
+  5. Kopieer dit token ergens zodat je het later kan gebruiken.
 
-  6. Go to Dashboard and Copy your Secret key.
+  6. Klik nu ook nog even op de dashboard. Kopieer de App Secret en bewaar die ook voor later.
 
-  ![Facebook secret](readme_images/secret_facebook.png)
+### IV - Pas de configuratie van je Bot applicatie aan.
+    1. Hiervoor moet je aanloggen in Bluemix http://www.bluemix.net
 
-### IV - Create a new Telegram bot
-  1. Into Telegram, start a new conversation with
+    2. In je dashboard zie je de aangemaakte applicatie. Herinner de naam die je voordien gekozen hebt.
+
+    3. Klik op de applicatie
+
+    4. Je ziet nu het dashboard van de applicatie. Selecteer hier runtime en environment variables.
+
+    5. Scroll naar de onderkant van de pagina. Daar zie je een aantal invul velden. Hier ga je de informatie van de facebook applicatie invullen.
+
+    6. Vul de volgende zaken in
+      i) App Secret
+      ii) Pagina token
+      iii) /webhook1234
+      Laat de 3 laatste velden op UNDEFINED staan
+
+    7. Klik op save. Je applicatie zal nu herstarten.
+
+
+### V - Koppel de facebook applicatie aan je bot
+  1. Klik op de button webhooks. Vul https://jouwgekozennaam.bluemix.net/messenger/webhook1234 in voor de callback url. Hierbij is de jouwgekozennaam de applicatie naam die je gebruikt hebt bij de installatie naar Bluemix.
   [@BotFather](https://telegram.me/botfather)
 
-  2. Say '/newbot' then give your bot a name and an username.
+  2. Vul als verify token abcd1234 in.
 
-  3. Copy the HTTP token that is given to you by BotFather.
+  3. Selecteer de opties messages, messages_deliveries, messaging_postbacks, and messaging_optins
 
-  4. Create an arbitrary webhookEndpoint for Telegram (ie. /webhook1234), and copy it for later.
+  4. Subscribe je gecreerde pagina op dit event.
 
-### V - Create (or import) your Watson Conversation dialog
-  1. Open the Watson Conversation tool, and create (or import) a new workspace.
 
-  2. Click on the three dots and choose View details.
+
+
+### VI - Maak nu een bot dialoog aan
+  1. Hiervoor vertrek je opnieuw vanuit het Bluemix dashboard
+
+  2. In het linker top menu kies je Services. Dit geeft je de lijst van services die je bot gebruikt. Klik op die met de naam wcm-conversation
 
   ![View details image](readme_images/workspace_id.png)
 
-  3. Copy the Workspace ID.
+  3. Click op de launch tool button. Dit opent een tool waarmee je de dialoog achter de bot kan wijzigen. Maak een nieuwe workspace aan kies, Dutch (Nederlands) als de taal.
 
-### VI - Set your environmental variables in Bluemix
+4. Voeg een aantal intents (Mogelijke types zaken die je bot kan behandelen). We gaan beginnen met 3 verschillende. Een die gewoon dag kan zeggen, een die mopjes kan vertellen en een derde die een excuus verzint als iemand een activiteit wil uitvoeren.
 
-  In order to work, your Bluemix app will need some environment variables.
+5. Hievoor maak je volgende intents :
+  1. Naam : #Hallo
+  2. Naam : #Activiteit
+  3. Naam : #Mop
+
+6. Test de intents. Dit kan je doen door rechts boven te klikken en dan in het vakje onderaan een boodschap te tikken. Merk op dat die niet exact moeten overeenkomen met de oorspronkelijke teksten. Dit is de kracht van artificiele inteligentie. De Watson conversation service heeft zichzelf getraind gebaseerd op jou voorbeelden.
+
+7. In sommige gevallen wil je ook nog onderwerpen toevoegen aan een bot gesprek. Hier zullen we vragen over welk onderwerp iemand een grap wil horen. Dit doe je door het toevoegen van entities. Voeg hier een aantal entities toe zoals hieronder.
+  1. Naam : @Groen
+  2. Naam : @Banaan
+
+8. Nu kunnen we de dialoog uitwerken voor onze bot. In basis zullen we volgende dialoog bouwen
+
+  1. welcome. Maak eerst een welcome node aan. Deze moet exact "welcome" noemen aangezien hij dan aan het begin van een gesprek komt. Verder willen we dat deze node gebruikt wordt telkens als iemand groet. Vandaar de if #Hallo in de trigger. Dus telkens als iemand de #Hallo intent oproept zal de bot met een groet antwoorden.
+
+  2. activiteit. Hier zullen we de bot een excuus laten verzinnen waarom we niet willen deelnemen aan een acitviteit. Het belangrijke hier is weer de if trigger conditie.
+
+  3. mop. Deze tak is iets gecompliceerder daar we nog moeten vragen waar de mop moet over gaan. Deze node stelt een vraag en wordt dan gevolgd door verschillende nodes die mopjes bevatten over verschillende onderwerpen.
+
+  4. Maak nu ook nog nodes die overeenkomen met de onderwerpen die je vroeger gedefinieerd hebt.
+
+  5. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
+
+### VII - Link je bot met de dialoog
+
+  1. We moeten nu nog de verbinding maken tussen de bot applicatie en de net aangemaakte dialoog. Dit doe je door middel van je workspace id. Via het menu linksboven kan je naar de workspace pagina. Klik op de .. bovenaan je worskspace en kies de detail optie.
+
+  2. Noteer dit id.
+
+  3. Voeg dit toe aan de environment variabelen van je bluemix applicatie. Dit is de laatste variabele WORKSPACE_ID.
+
   1. Go to https://bluemix.net and get to the Runtime part of the app freshly created. Click on Environment variables.
 
   ![Bluemix app image](readme_images/bluemix_app.png)
