@@ -49,15 +49,15 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
     3. Klik op de applicatie
 
-    ![Bluemix app](readme_images/08_BM_Application_dash.png)
+  ![Bluemix app](readme_images/08_BM_Application_dash.png)
 
     4. Je ziet nu het dashboard van de applicatie. Selecteer hier runtime en environment variables.
 
-    ![environment](readme_images/09_Application_environment.png)
+  ![environment](readme_images/09_Application_environment.png)
 
     5. Scroll naar de onderkant van de pagina. Daar zie je een aantal invul velden. Hier ga je de informatie van de facebook applicatie invullen.
 
-    ![vars](readme_images/10_environment_variables.png)
+  ![vars](readme_images/10_environment_variables.png)
 
     6. Vul de volgende zaken in
       i) App Secret
@@ -71,7 +71,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 ### V - Koppel de facebook applicatie aan je bot
   1. Ga nu terug naar je Facebook App Klik op de button webhooks. Vul https://jouwgekozennaam.bluemix.net/messenger/webhook1234 in voor de callback url. Hierbij is de jouwgekozennaam de applicatie naam die je gebruikt hebt bij de installatie naar Bluemix.
 
-  [webhook](readme_images/06_webhooks.png)
+  ![webhook](readme_images/06_webhooks.png)
 
   2. Vul als verify token abcd1234 in.
 
