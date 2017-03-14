@@ -15,7 +15,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 ### II - Maak een nieuwe facebook pagina
   1. Om je bot te kunnen testen maak je een nieuwe pagina via https://www.facebook.com/pages/create/
 
-  ![create page image](readme_images/01%20create%20facebook%20pagina.png)
+  ![create page image](readme_images/01_create_facebook_page.png)
 
   2. Kies een community pagina
 
