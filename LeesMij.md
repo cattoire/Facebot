@@ -18,6 +18,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   ![create page image](readme_images/01_create_facebook_page.png)
 
   2. Kies een community pagina
+
   ![community page](readme_images/02_cause_or_community.png)
 
   3. Geef de pagina een naam naar keuze. Als er nog tijd over is kan je de pagina straks ook versieren met wat fotos
@@ -26,6 +27,8 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   1. Ga naar https://developers.facebook.com
 
   2. Log in met je facebook account en maak een nieuwe app.
+
+    ![create page image](readme_images/03_new_faebook_app.png)
 
   3. Kies App for Messenger en maak  een app ID. Kopieer dit app ID zodat je die hebt voor later.
 
