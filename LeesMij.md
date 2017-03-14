@@ -32,9 +32,11 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   3. Kies App for Messenger en maak  een app ID. Kopieer dit app ID zodat je die hebt voor later.
 
+  ![app id](readme_images/04_new_app_id.png)
+
   4. In het vakje token generation selecteer je, je net gemaakte pagina. Dit genereert automatisch een nieuw token. Bewaar dit token, je hebt dit later nodig.
 
-  ![access token](readme_images/04_new_app_id.png)
+  ![access token](readme_images/05_page_token.png)
 
   5. Kopieer dit token ergens zodat je het later kan gebruiken.
 
