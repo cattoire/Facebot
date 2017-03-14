@@ -18,6 +18,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   ![create page image](readme_images/01_create_facebook_page.png)
 
   2. Kies een community pagina
+  ![community page](readme_images/02_cause_or_community.png)
 
   3. Geef de pagina een naam naar keuze. Als er nog tijd over is kan je de pagina straks ook versieren met wat fotos
 
