@@ -28,7 +28,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   2. Log in met je facebook account en maak een nieuwe app.
 
-    ![create page image](readme_images/03_new_faebook_app.png)
+    ![create page image](readme_images/03_new_facebook_app.png)
 
   3. Kies App for Messenger en maak  een app ID. Kopieer dit app ID zodat je die hebt voor later.
 
