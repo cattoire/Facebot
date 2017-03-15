@@ -104,7 +104,6 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   4. Voeg een aantal intents (Mogelijke types zaken die je bot kan behandelen). We gaan beginnen met 3 verschillende. Een die gewoon dag kan zeggen, een die mopjes kan vertellen en een derde die een excuus verzint als iemand een activiteit wil uitvoeren.
 
   5. Hievoor maak je volgende intents :
-
     1. Naam : #Hallo
 
   ![hallo](readme_images/16_hallo_intent.png)
