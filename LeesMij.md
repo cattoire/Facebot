@@ -109,7 +109,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
         ![hallo](readme_images/16_hallo_intent.png)
   ii) Naam : #Activiteit
         ![activiteit](readme_images/17_activiteit_intent.png)
-  iii) Naam : #Mop
+iii) Naam : #Mop
         ![mop](readme_images/18_mop_intent.png)
 
   6. Test de intents. Dit kan je doen door rechts boven te klikken en dan in het vakje onderaan een boodschap te tikken. Merk op dat die niet exact moeten overeenkomen met de oorspronkelijke teksten. Dit is de kracht van artificiele inteligentie. De Watson conversation service heeft zichzelf getraind gebaseerd op jou voorbeelden.
