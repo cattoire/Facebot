@@ -66,7 +66,9 @@ The purpose is to build your own facebook bot so that you are also available for
 
       ii) Pagina token
 
-      iii) /webhook1234
+      iii) abcd1234
+
+      iv) /webhook1234
 
       Leave the last 3 fields as UNDEFINED
 
@@ -74,7 +76,7 @@ The purpose is to build your own facebook bot so that you are also available for
 
 
 ### V - Link the facebook application to your bot
-  1. Switch back to your facebook app. Click on webhooks. Complete https://chosenname.bluemix.net/messenger/webhook1234 in the callback url. The chosenname should be replaced with the name you used at the creation of the Bluemix application.
+  1. Switch back to your facebook app. Click on webhooks. Complete https://chosenname.mybluemix.net/messenger/webhook1234 in the callback url. The chosenname should be replaced with the name you used at the creation of the Bluemix application.
 
    ![webhook](readme_images/06_webhooks.png)
 
