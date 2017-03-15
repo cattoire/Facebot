@@ -62,9 +62,13 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   ![vars](readme_images/10_environment_variables.png)
 
   6. Vul de volgende zaken in
+
       i) App Secret
+
       ii) Pagina token
+
       iii) /webhook1234
+
       Laat de 3 laatste velden op UNDEFINED staan
 
   7. Klik op save. Je applicatie zal nu herstarten.
@@ -151,6 +155,10 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   ![banaan node](readme_images/28_banaan_mop.png)
 
+    5. Voeg ook nog een node toe die de gevallen opvangt waar iemand iets anders vraagt dan een van voorgaande topics.
+
+  ![gezever node](readme_images/31_gezever_node.png)  
+
     5. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
 
 ### VII - Link je bot met de dialoog
@@ -163,31 +171,10 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   3. Voeg dit toe aan de environment variabelen van je bluemix applicatie. Dit is de laatste variabele WORKSPACE_ID.
 
-  1. Go to https://bluemix.net and get to the Runtime part of the app freshly created. Click on Environment variables.
 
   ![env vars id](readme_images/30_environment_workspace_id.png)
 
-  2. Use the Page Access Token previously copied as **MESSENGER_PAGE_TOKEN**.
-
-  3. Use the Secret Key as **MESSENGER_APP_SECRET**.
-
-  4. Set an arbitrary **MESSENGER_VERIFY_TOKEN** and keep it for later.
-
-  5. Create a webhook endpoint for Facebook Messenger as you did for Telegram with what you saved earlier and set it as **MESSENGER_WEBHOOKENDPOINT**.
-
-  6. Set your **TELEGRAM_AUTH_TOKEN** and **TELEGRAM_WEBHOOKENDPOINT** with what you saved earlier.
-
-  7. Set your **WORKSPACE_ID** with what you copied earlier.
-
-### VII - Configure the Facebook webhooks
-  1. Click on Configure webhooks
-
-  2. Use https://sample.mybluemix.net/messenger/MESSENGER_WEBHOOKENDPOINT (watch out, we're here using our sample link, DO NOT copy paste this link)
-
-  3. Select messages, messages_deliveries, messaging_postbacks, and messaging_optins as subscribing fields.
-
-### VIII - Configure the Telegram webhook
-  1. Open the page https://api.telegram.org/botHTTP_TOKEN/setWebhook?url=https://sample.mybluemix.net/telegram/TELEGRAM_WEBHOOKENDPOINT
 
 
-## Great ! Your Watson Conversation is now correctly set and can be used on the web, Telegram, and Facebook Messenger.
+
+## Gebruik nu Messenger om met je bot te praten
