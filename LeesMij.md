@@ -122,6 +122,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 ![test](readme_images/19_try_intent.png)
 
   7. In sommige gevallen wil je ook nog onderwerpen toevoegen aan een bot gesprek. Hier zullen we vragen over welk onderwerp iemand een grap wil horen. Dit doe je door het toevoegen van entities. Voeg hier een aantal entities toe zoals hieronder.
+
     1. Naam : @Groen
 
 ![groen](readme_images/20_groen_entity.png)
@@ -141,7 +142,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
     2. activiteit. Hier zullen we de bot een excuus laten verzinnen waarom we niet willen deelnemen aan een acitviteit. Het belangrijke hier is weer de if trigger conditie.
 
-  ![activiteit node](readme_images/24_activiteit_node.png)
+![activiteit node](readme_images/24_activiteit_node.png)
 
     3. mop. Deze tak is iets gecompliceerder daar we nog moeten vragen waar de mop moet over gaan. Deze node stelt een vraag en wordt dan gevolgd door verschillende nodes die mopjes bevatten over verschillende onderwerpen.
 
@@ -149,15 +150,15 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
     4. Maak nu ook nog nodes die overeenkomen met de onderwerpen die je vroeger gedefinieerd hebt.
 
-  ![keuze node](readme_images/26_mop_keuze.png)
+![keuze node](readme_images/26_mop_keuze.png)
 
-  ![groen node](readme_images/27_groene_mop.png)
+![groen node](readme_images/27_groene_mop.png)
 
-  ![banaan node](readme_images/28_banaan_mop.png)
+![banaan node](readme_images/28_banaan_mop.png)
 
     5. Voeg ook nog een node toe die de gevallen opvangt waar iemand iets anders vraagt dan een van voorgaande topics.
 
-  ![gezever node](readme_images/31_gezever_node.png)  
+![gezever node](readme_images/31_gezever_node.png)  
 
     5. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
 
@@ -165,14 +166,14 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   1. We moeten nu nog de verbinding maken tussen de bot applicatie en de net aangemaakte dialoog. Dit doe je door middel van je workspace id. Via het menu linksboven kan je naar de workspace pagina. Klik op de .. bovenaan je worskspace en kies de detail optie.
 
-  ![ws id](readme_images/29_workspace_id.png)
+![ws id](readme_images/29_workspace_id.png)
 
   2. Noteer dit id.
 
   3. Voeg dit toe aan de environment variabelen van je bluemix applicatie. Dit is de laatste variabele WORKSPACE_ID.
 
 
-  ![env vars id](readme_images/30_environment_workspace_id.png)
+![env vars id](readme_images/30_environment_workspace_id.png)
 
 
 
