@@ -9,7 +9,7 @@ The purpose is to build your own facebook bot so that you are also available for
 
   First we gone create the bot application. This can be done through the below button. You will need a userid on Bluemix to achieve this. If you don't know how to do this then ask one of the tutors.  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cattoire/Facebot)
 
-  Choose a name for your application. The link towards the application will be https://chosenname.bluemix.net/ Note this name as you will need it at a later stage.
+  Choose a name for your application. The link towards the application will be https://chosenname.mybluemix.net/ Note this name as you will need it at a later stage.
 
 ### II - Create a new facebook page
   1. To test your bot you create a new page. This can be done through https://www.facebook.com/pages/create/
