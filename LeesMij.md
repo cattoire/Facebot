@@ -4,7 +4,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 
 
-## Installeer je eign bot applicatie op IBM Bluemix !
+## Installeer je eigen bot applicatie op IBM Bluemix !
 
 ### I - Installeer in Bluemix
 
@@ -104,50 +104,40 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   4. Voeg een aantal intents (Mogelijke types zaken die je bot kan behandelen). We gaan beginnen met 3 verschillende. Een die gewoon dag kan zeggen, een die mopjes kan vertellen en een derde die een excuus verzint als iemand een activiteit wil uitvoeren.
 
   5. Hievoor maak je volgende intents :
-    1. Naam : #Hallo
-
-  ![hallo](readme_images/16_hallo_intent.png)
-
-    2. Naam : #Activiteit
-
-  ![activiteit](readme_images/17_activiteit_intent.png)
-
-    3. Naam : #Mop
-
-  ![mop](readme_images/18_mop_intent.png)
+    i) Naam : #Hallo
+        ![hallo](readme_images/16_hallo_intent.png)
+  ii) Naam : #Activiteit
+        ![activiteit](readme_images/17_activiteit_intent.png)
+  iii) Naam : #Mop
+        ![mop](readme_images/18_mop_intent.png)
 
   6. Test de intents. Dit kan je doen door rechts boven te klikken en dan in het vakje onderaan een boodschap te tikken. Merk op dat die niet exact moeten overeenkomen met de oorspronkelijke teksten. Dit is de kracht van artificiele inteligentie. De Watson conversation service heeft zichzelf getraind gebaseerd op jou voorbeelden.
 
 ![test](readme_images/19_try_intent.png)
 
   7. In sommige gevallen wil je ook nog onderwerpen toevoegen aan een bot gesprek. Hier zullen we vragen over welk onderwerp iemand een grap wil horen. Dit doe je door het toevoegen van entities. Voeg hier een aantal entities toe zoals hieronder.
-
-    1. Naam : @Groen
-
-![groen](readme_images/20_groen_entity.png)
-
-    2. Naam : @Banaan
-
-![banaan](readme_images/21_banaan_entity.png)  
+    i) Naam : @Groen
+        ![groen](readme_images/20_groen_entity.png)
+    ii) Naam : @Banaan
+        ![banaan](readme_images/21_banaan_entity.png)  
 
   8. Nu kunnen we de dialoog uitwerken voor onze bot. In basis zullen we volgende dialoog bouwen
 
 ![dialoog](readme_images/22_dialog.png)
 
-
-    1. welcome. Maak eerst een welcome node aan. Deze moet exact "welcome" noemen aangezien hij dan aan het begin van een gesprek komt. Verder willen we dat deze node gebruikt wordt telkens als iemand groet. Vandaar de if #Hallo in de trigger. Dus telkens als iemand de #Hallo intent oproept zal de bot met een groet antwoorden.
+1. welcome. Maak eerst een welcome node aan. Deze moet exact "welcome" noemen aangezien hij dan aan het begin van een gesprek komt. Verder willen we dat deze node gebruikt wordt telkens als iemand groet. Vandaar de if #Hallo in de trigger. Dus telkens als iemand de #Hallo intent oproept zal de bot met een groet antwoorden.
 
 ![hallo node](readme_images/23_hallo_node.png)
 
-    2. activiteit. Hier zullen we de bot een excuus laten verzinnen waarom we niet willen deelnemen aan een acitviteit. Het belangrijke hier is weer de if trigger conditie.
+2. activiteit. Hier zullen we de bot een excuus laten verzinnen waarom we niet willen deelnemen aan een acitviteit. Het belangrijke hier is weer de if trigger conditie.
 
 ![activiteit node](readme_images/24_activiteit_node.png)
 
-    3. mop. Deze tak is iets gecompliceerder daar we nog moeten vragen waar de mop moet over gaan. Deze node stelt een vraag en wordt dan gevolgd door verschillende nodes die mopjes bevatten over verschillende onderwerpen.
+3. mop. Deze tak is iets gecompliceerder daar we nog moeten vragen waar de mop moet over gaan. Deze node stelt een vraag en wordt dan gevolgd door verschillende nodes die mopjes bevatten over verschillende onderwerpen.
 
 ![mop node](readme_images/25_mop_node.png)
 
-    4. Maak nu ook nog nodes die overeenkomen met de onderwerpen die je vroeger gedefinieerd hebt.
+4. Maak nu ook nog nodes die overeenkomen met de onderwerpen die je vroeger gedefinieerd hebt.
 
 ![keuze node](readme_images/26_mop_keuze.png)
 
@@ -155,11 +145,11 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 ![banaan node](readme_images/28_banaan_mop.png)
 
-    5. Voeg ook nog een node toe die de gevallen opvangt waar iemand iets anders vraagt dan een van voorgaande topics.
+5. Voeg ook nog een node toe die de gevallen opvangt waar iemand iets anders vraagt dan een van voorgaande topics.
 
 ![gezever node](readme_images/31_gezever_node.png)  
 
-    5. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
+6. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
 
 ### VII - Link je bot met de dialoog
 
