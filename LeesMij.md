@@ -104,6 +104,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
   4. Voeg een aantal intents (Mogelijke types zaken die je bot kan behandelen). We gaan beginnen met 3 verschillende. Een die gewoon dag kan zeggen, een die mopjes kan vertellen en een derde die een excuus verzint als iemand een activiteit wil uitvoeren.
 
   5. Hievoor maak je volgende intents :
+  
     i) Naam : #Hallo
         ![hallo](readme_images/16_hallo_intent.png)
   ii) Naam : #Activiteit
@@ -116,6 +117,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 ![test](readme_images/19_try_intent.png)
 
   7. In sommige gevallen wil je ook nog onderwerpen toevoegen aan een bot gesprek. Hier zullen we vragen over welk onderwerp iemand een grap wil horen. Dit doe je door het toevoegen van entities. Voeg hier een aantal entities toe zoals hieronder.
+
     i) Naam : @Groen
         ![groen](readme_images/20_groen_entity.png)
     ii) Naam : @Banaan
@@ -147,7 +149,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 5. Voeg ook nog een node toe die de gevallen opvangt waar iemand iets anders vraagt dan een van voorgaande topics.
 
-![gezever node](readme_images/31_gezever_node.png)  
+![gezever node](readme_images/31_node_gezever.png)  
 
 6. Je kan nu ook weer met de knop rechtsboven de dialoog uit testen.
 
