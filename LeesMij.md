@@ -10,7 +10,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
   Eerst en vooral moeten we een bot applicatie instaleren, dit kan gebeuren door op de bijbehorende button te klikken. Eerst moet je wel een usernaam en paswoord hebben op Bluemix. Indien je niet weet hoe dit moet vraag dan even een begeleider  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/cattoire/Facebot)
 
-  Kies een naam voor je applicatie. De latere link naar de applicatie wordt dan https://jouwgekozennaam.bluemix.net/ Noteer deze naam ergens want je zal die later nodig hebben.
+  Kies een naam voor je applicatie. De latere link naar de applicatie wordt dan https://jouwgekozennaam.mybluemix.net/ Noteer deze naam ergens want je zal die later nodig hebben.
 
 ### II - Maak een nieuwe facebook pagina
   1. Om je bot te kunnen testen maak je een nieuwe pagina via https://www.facebook.com/pages/create/
@@ -67,7 +67,9 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
       ii) Pagina token
 
-      iii) /webhook1234
+      iii) abcd1234
+
+      iv) /webhook1234
 
       Laat de 3 laatste velden op UNDEFINED staan
 
@@ -75,7 +77,7 @@ We gaan hierbij gebruik maken van IBM Watson. Je weet wel die beroemde quizer.
 
 
 ### V - Koppel de facebook applicatie aan je bot
-  1. Ga nu terug naar je Facebook App Klik op de button webhooks. Vul https://jouwgekozennaam.bluemix.net/messenger/webhook1234 in voor de callback url. Hierbij is de jouwgekozennaam de applicatie naam die je gebruikt hebt bij de installatie naar Bluemix.
+  1. Ga nu terug naar je Facebook App Klik op de button webhooks. Vul https://jouwgekozennaam.mybluemix.net/messenger/webhook1234 in voor de callback url. Hierbij is de jouwgekozennaam de applicatie naam die je gebruikt hebt bij de installatie naar Bluemix.
 
    ![webhook](readme_images/06_webhooks.png)
 
